@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Dashboard | Missed Tasks</title>
+    <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
+    <meta content="Themesdesign" name="author" />
+    <link rel="shortcut icon" href="assets/images/SR-favicon.png">
+
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="../plugins/morris/morris.css">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Top Bar Start -->
+        <div class="topbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="index.html" class="logo">
+                    <span class="logo-light">
+                            <i class="mdi mdi-camera-control"></i> Sales Ruby
+                            <!-- <i class="mdi mdi-camera-control"></i> Stexo -->
+                            <!-- <img src="assets/images/srlogo.png" class="SRlogo" alt="logo"> -->
+                        </span>
+                    <span class="logo-sm">
+                        <i class="mdi mdi-camera-control"></i>
+                            <!-- <img src="assets/images/SR-favicon.png" class="SRfav" alt=""> -->
+                        </span>
+                </a>
+            </div>
+
+            <nav class="navbar-custom">
+                <ul class="navbar-right list-inline float-right mb-0">       
+
+                     <li class="dropdown notification-list list-inline-item">
+                        <div class="dropdown notification-list nav-pro-img">
+                            <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="assets/images/users/no-img.png" alt="user" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-wallet"></i> Wallet</a>
+                                <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline"></i> Lock screen</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="#"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <ul class="list-inline menu-left mb-0">
+                    <li class="float-left">
+                        <button class="button-menu-mobile open-left waves-effect">
+                            <i class="mdi mdi-menu"></i>
+                        </button>
+                    </li>
+                    <li class="d-none d-md-inline-block">
+                        <form role="search" class="app-search">
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control" placeholder="Search..">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="slimscroll-menu" id="remove-scroll">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu" id="side-menu">
+                        <li class="menu-title">Menu</li>
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="icon-accelerator"></i><span> Dashboard </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-circle"></i><span> Leads <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="mylead.html">My Lead</a></li>
+                                <li><a href="addlead.html">Add Lead</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-chart-line"></i><span> My Tasks <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="deadline.html">Deadlines</a></li>
+                                <li><a href="missed.html">Missed</a></li>
+                                <li><a href="closed.html">Closed</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-group"></i> <span> Manage Team <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                            <ul class="submenu">
+                                <li><a href="myteam.html">My Team List</a></li>
+                                <li><a href="alllead.html">All Leads</a></li>
+                                <li><a href="viewteam.html">View Team Activities</a></li>
+                                <li><a href="addrep.html">Add Sales Rep</a></li>
+                                <li><a href="viewexpectation.html">View Expectations</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-package-variant"></i> <span> Products <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                            <ul class="submenu">
+                                <li><a href="addproduct.html">Add Product(s)</a></li>
+                                <li><a href="manageprod.html">Manage Product(s)</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- Sidebar -->
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="page-title-box">
+                        <div class="row align-items-center">
+                            <div class="col-sm-6">
+                                <h4 class="page-title">Missed Task and Schedules</h4>
+                            </div>
+                            <!-- <div class="col-sm-6">
+                                <ol class="breadcrumb float-right">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Stexo</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>
+                                    <li class="breadcrumb-item active">Data Table</li>
+                                </ol>
+                            </div> -->
+                        </div> <!-- end row -->
+                    </div>
+                    <!-- end page-title -->
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card m-b-30">
+                                <div class="card-body">
+    
+                                    <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Date of Next Action</th>
+                                            <th scope="col">Lead Details</th>
+                                            <th scope="col">Next Action</th>
+                                            <th scope="col">Add Next Action</th>
+                                            
+                                        </tr>
+                                        </thead>
+    
+    
+                                        <tbody>
+                                        <tr>
+                                            <td><span class="text-danger h5">0000-00-00&nbsp;&nbsp;</span></td>
+                   <td ><a href="javascript:void(0)" data-toggle="collapse" data-target="#pass178"  title=" View lead detials" >David 
+                      <br/><i><b>Senior Developer</b>  @  From Ikart<i></a>
+
+                              <div class="collapse" id="pass178">
+                                
+                            <div class="well" style="height:auto;">
+                                      
+                                    <span class="text-center"></span>
+                                        
+                                            <div class="box-body">
+                                                  <p class="h5">Email:umohdavid@gmail.com &nbsp;&nbsp;&nbsp;&nbsp;Phone:8039699928</p>
+                                          <p> Lead Status: &nbsp;&nbsp;Called<p> Designation:&nbsp;&nbsp;Senior Developer&nbsp;&nbsp;Organisation:&nbsp;&nbsp;From Ikart </p> </div> </td>
+                  
+                  <td>Will sent him an insight email today</td>
+                  <td>  
+                      <a href="#" data-toggle="tooltip" class="btn btn-primary btn-sm" title="Edit Next Action Comments">Edit</a>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td>
+                      <span class="text-danger h5">0000-00-00&nbsp;&nbsp;</span>
+                    </td>
+                   <td >
+                       <a href="javascript:void(0)" data-toggle="collapse" data-target="#pass179"  title=" View lead details" >Dayo
+                      <br/><i><b>Senior Developer</b>  @  From Victor<i></a>
+
+                              <div class="collapse" id="pass179">
+                                
+                            <div class="well" style="height:auto;">
+                                      
+                                    <span class="text-center"></span>
+                                        
+                                            <div class="box-body">
+                                                  <p class="h5">Email:aderemi.dayo.o@gmail.com &nbsp;&nbsp;&nbsp;&nbsp;Phone:08137311818</p>
+                                          <p> Lead Status: &nbsp;&nbsp;Called<p> Designation:&nbsp;&nbsp;Senior Developer&nbsp;&nbsp;Organisation:&nbsp;&nbsp;From Victor </p> </div> </td>
+                  
+                  <td>schedule to come to the office by Wed 3pm, send him a reminder by today</td>
+                  <td>  
+                      <a href="#" data-toggle="tooltip" class="btn btn-primary btn-sm" title="Edit Next Action Comments">Edit</a>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td><span class="text-danger h5">0000-00-00&nbsp;&nbsp;</span></td>
+                   <td >
+                       <a href="javascript:void(0)" data-toggle="collapse" data-target="#pass201"  title=" View lead details" >Mr Alake TM Ade
+                      <br/><i><b>Managing Director</b>  @  Dataguru and Sons TM<i></a>
+
+                              <div class="collapse" id="pass201">
+                                
+                            <div class="well" style="height:auto;">
+                                      
+                                    <span class="text-center"></span>
+                                        
+                                            <div class="box-body">
+                                                  <p class="h5">Email:aleketm@gmail.com &nbsp;&nbsp;&nbsp;&nbsp;Phone:07030415912</p>
+                                          <p> Lead Status: &nbsp;&nbsp;Invoice Sent<p> Designation:&nbsp;&nbsp;Managing Director&nbsp;&nbsp;Organisation:&nbsp;&nbsp;Dataguru and Sons TM </p> </div> </td>
+                  
+                  <td>inn</td>
+                  <td>  
+                      <a href="#" class="btn btn-primary btn-sm" data-toggle="tooltip" title="Edit Next Action Comments">Edit</a>
+                  </td>
+                </tr>   
+                                        </tbody>
+                                    </table>
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                                                Showing 1 to 3 of 0 entries
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                                                <ul class="pagination">
+                                                    <li class="paginate_button previous disabled" id="example2_previous">
+                                                        <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a>
+                                                    </li>
+                                                    <li class="paginate_button next disabled" id="example2_next">
+                                                        <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="1">Next</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+            <!-- content -->
+
+            <footer class="footer">
+               Sales Ruby Limited © 2020 <span class="d-none d-sm-inline-block"> - Crafted by Web Development Team</span>.
+            </footer>
+
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Right content here -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- jQuery  -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/metismenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/waves.min.js"></script>
+
+    <!--Morris Chart-->
+    <script src="../plugins/morris/morris.min.js"></script>
+    <script src="../plugins/raphael/raphael.min.js"></script>
+
+    <script src="assets/pages/dashboard.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Dashboard</title>
+    <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
+    <meta content="Themesdesign" name="author" />
+    <link rel="shortcut icon" href="assets/images/SR-favicon.png">
+
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="../plugins/morris/morris.css">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Top Bar Start -->
+        <div class="topbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="index.html" class="logo">
+                    <span class="logo-light">
+                            <i class="mdi mdi-camera-control"></i> Sales Ruby
+                            <!-- <i class="mdi mdi-camera-control"></i> Stexo -->
+                            <!-- <img src="assets/images/srlogo.png" class="SRlogo" alt="logo"> -->
+                        </span>
+                    <span class="logo-sm">
+                        <i class="mdi mdi-camera-control"></i>
+                            <!-- <img src="assets/images/SR-favicon.png" class="SRfav" alt=""> -->
+                        </span>
+                </a>
+            </div>
+
+            <nav class="navbar-custom">
+                <ul class="navbar-right list-inline float-right mb-0">       
+
+                     <li class="dropdown notification-list list-inline-item">
+                        <div class="dropdown notification-list nav-pro-img">
+                            <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="assets/images/users/no-img.png" alt="user" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-wallet"></i> Wallet</a>
+                                <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline"></i> Lock screen</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="#"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <ul class="list-inline menu-left mb-0">
+                    <li class="float-left">
+                        <button class="button-menu-mobile open-left waves-effect">
+                            <i class="mdi mdi-menu"></i>
+                        </button>
+                    </li>
+                    <li class="d-none d-md-inline-block">
+                        <form role="search" class="app-search">
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control" placeholder="Search..">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="slimscroll-menu" id="remove-scroll">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu" id="side-menu">
+                        <li class="menu-title">Menu</li>
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="icon-accelerator"></i><span> Dashboard </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-circle"></i><span> Leads <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="mylead.html">My Lead</a></li>
+                                <li><a href="addlead.html">Add Lead</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-chart-line"></i><span> My Tasks <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="deadline.html">Deadlines</a></li>
+                                <li><a href="missed.html">Missed</a></li>
+                                <li><a href="closed.html">Closed</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-group"></i> <span> Manage Team <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                            <ul class="submenu">
+                                <li><a href="myteam.html">My Team List</a></li>
+                                <li><a href="alllead.html">All Leads</a></li>
+                                <li><a href="viewteam.html">View Team Activities</a></li>
+                                <li><a href="addrep.html">Add Sales Rep</a></li>
+                                <li><a href="viewexpectation.html">View Expectations</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-package-variant"></i> <span> Products <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                            <ul class="submenu">
+                                <li><a href="addproduct.html">Add Product(s)</a></li>
+                                <li><a href="manageprod.html">Manage Product(s)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Sidebar -->
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="page-title-box">
+                        <div class="row align-items-center">
+                            <div class="col-sm-6">
+                                <h4 class="page-title">Dashboard</h4>
+                            </div>
+                            <div class="col-sm-6">
+                                <ol class="breadcrumb float-right">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Representative</a></li>
+                                    <li class="breadcrumb-item active">Dashboard</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- end page-title -->
+
+                    <div class="row">
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-heading p-4">
+                                    <div class="mini-stat-icon float-right">
+                                        <i class="mdi mdi-account-plus bg-primary  text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-16">Registrations</h5>
+                                    </div>
+                                    <!-- <h3 class="mt-4">43,225</h3>
+                                    <div class="progress mt-4" style="height: 4px;">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> -->
+                                    <p class="text-muted mt-2 mb-0">Online Registration
+                                        <!-- <span class="float-right">75%</span> -->
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-heading p-4">
+                                    <div class="mini-stat-icon float-right">
+                                        <i class="mdi mdi-thumb-up bg-success text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-16">Closed Deal</h5>
+                                    </div>
+                                    <!-- <h3 class="mt-4">$73,265</h3>
+                                    <div class="progress mt-4" style="height: 4px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> -->
+                                    <p class="text-muted mt-2 mb-0">Closed Tasks
+                                        <!-- <span class="float-right">88%</span> -->
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-heading p-4">
+                                    <div class="mini-stat-icon float-right">
+                                        <i class="mdi mdi-phone-missed bg-warning text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-16">Missed Deal</h5>
+                                    </div>
+                                    <!-- <h3 class="mt-4">447</h3>
+                                    <div class="progress mt-4" style="height: 4px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> -->
+                                    <p class="text-muted mt-2 mb-0">Missed Tasks
+                                        <!-- <span class="float-right">68%</span> -->
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-heading p-4">
+                                    <div class="mini-stat-icon float-right">
+                                        <i class="mdi mdi-calendar-check bg-danger text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-16">Deadline</h5>
+                                    </div>
+                                    <!-- <h3 class="mt-4">86%</h3>
+                                    <div class="progress mt-4" style="height: 4px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div> -->
+                                    <p class="text-muted mt-2 mb-0">Deadline(s) approaching
+                                        <!-- <span class="float-right">82%</span> -->
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- START ROW -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card m-b-30">
+                                <div class="card-body">
+                                    <h4 class="mt-0 header-title mb-4">My Lead</h4>
+                                    <!-- <form role="search" class="app-search">
+                                        <div class="form-group mb-0">
+                                            <input type="text" class="form-control" placeholder="Search..">
+                                            <input type="text" class="form-control" placeholder="Search..">
+                                            <input type="text" class="form-control" placeholder="Search..">
+                                            <input type="text" class="form-control" placeholder="Search.."> 
+                                            <button type="submit"><i class="fa fa-search"></i></button>
+                                        </div>
+                                    </form> -->
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">S/N</th>
+                                                    <th scope="col">Lead Details</th>
+                                                    <th scope="col">Product</th>
+                                                    <th scope="col">Deal Status</th>
+                                                    <th scope="col">Comments and Next Action Date</th>
+                                                    <th scope="col">Actions</th>
+                                                    <th scope="col" colspan="2"></th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Philip Smead</td>
+                                                    <td><p>SLC 2020</p><p>9,420,000</p></td>
+                                                    <td><span class="badge badge-info">Invoice sent</span></td>
+                                                    
+                                                    <td>
+                                                        <p>Paid completely for Academy training</p>
+                                                        <p>Next follow up:</p>
+                                                    </td>
+                                                    <td>15/1/2018</td>
+
+                                                    <td>
+                                                        <div>
+                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Brent Shipley</td>
+                                                    <td><p>SLC 2020 Past Videos</p><p>9,420,000</p></td>
+                                                    <td><span class="badge badge-warning">Pending</span></td>
+                                                    
+                                                    <td>
+                                                        <p>On pipeline of purchasing</p>
+                                                        <p>Next follow up:</p>
+                                                    </td>
+                                                    <td>15/1/2018</td>
+
+                                                    <td>
+                                                        <div>
+                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Hannah Okwulem</td>
+                                                    <td><p>SLC 2020 Past Videos</p><p>9,420,000</p></td>
+                                                    <td><span class="badge badge-secondary">Negotiation</span></td>
+                                                    
+                                                    <td>
+                                                        <p>On pipeline of purchasing</p>
+                                                        <p>Next follow up:</p>
+                                                    </td>
+                                                    <td>15/1/2018</td>
+
+                                                    <td>
+                                                        <div>
+                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Johnson Inya</td>
+                                                    <td><p>SLC 2020 Past Videos</p><p>9,420,000</p></td>
+                                                    <td><span class="badge badge-danger">Cancel</span></td>
+                                                    
+                                                    <td>
+                                                        <p>On pipeline of purchasing</p>
+                                                        <p>Next follow up:</p>
+                                                    </td>
+                                                    <td>15/1/2018</td>
+
+                                                    <td>
+                                                        <div>
+                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
+                                                        </div>
+                                                    </td> 
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Vivian Onyinyechi</td>
+                                                    <td><p>SLC 2020 Past Videos</p><p>9,420,000</p></td>
+                                                    <td><span class="badge badge-success">Closed</span></td>
+                                                    
+                                                    <td>
+                                                        <p>On pipeline of purchasing</p>
+                                                        <p>Next follow up:</p>
+                                                    </td>
+                                                    <td>15/1/2018</td>
+
+                                                    <td>
+                                                        <div>
+                                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- END ROW -->
+
+                </div>
+                <!-- container-fluid -->
+
+            </div>
+            <!-- content -->
+
+            <footer class="footer">
+               Sales Ruby Limited © 2020 <span class="d-none d-sm-inline-block"> - Crafted by Web Development Team</span>.
+            </footer>
+
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Right content here -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- jQuery  -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/metismenu.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/waves.min.js"></script>
+
+    <!--Morris Chart-->
+    <script src="../plugins/morris/morris.min.js"></script>
+    <script src="../plugins/raphael/raphael.min.js"></script>
+
+    <script src="assets/pages/dashboard.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

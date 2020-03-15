@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Dashboard | Add Lead</title>
+    <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
+    <meta content="Themesdesign" name="author" />
+    <link rel="shortcut icon" href="assets/images/SR-favicon.png">
+
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="../plugins/morris/morris.css">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Top Bar Start -->
+        <div class="topbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="index.html" class="logo">
+                    <span class="logo-light">
+                            <i class="mdi mdi-camera-control"></i> Sales Ruby
+                            <!-- <i class="mdi mdi-camera-control"></i> Stexo -->
+                            <!-- <img src="assets/images/srlogo.png" class="SRlogo" alt="logo"> -->
+                        </span>
+                    <span class="logo-sm">
+                        <i class="mdi mdi-camera-control"></i>
+                            <!-- <img src="assets/images/SR-favicon.png" class="SRfav" alt=""> -->
+                        </span>
+                </a>
+            </div>
+
+            <nav class="navbar-custom">
+                <ul class="navbar-right list-inline float-right mb-0">       
+
+                     <li class="dropdown notification-list list-inline-item">
+                        <div class="dropdown notification-list nav-pro-img">
+                            <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="assets/images/users/no-img.png" alt="user" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-wallet"></i> Wallet</a>
+                                <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline"></i> Lock screen</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="#"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <ul class="list-inline menu-left mb-0">
+                    <li class="float-left">
+                        <button class="button-menu-mobile open-left waves-effect">
+                            <i class="mdi mdi-menu"></i>
+                        </button>
+                    </li>
+                    <li class="d-none d-md-inline-block">
+                        <form role="search" class="app-search">
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control" placeholder="Search..">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="slimscroll-menu" id="remove-scroll">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu" id="side-menu">
+                        <li class="menu-title">Menu</li>
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="icon-accelerator"></i><span> Dashboard </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-circle"></i><span> Leads <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="mylead.html">My Lead</a></li>
+                                <li><a href="addlead.html">Add Lead</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-chart-line"></i><span>My Tasks <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="deadline.html">Deadlines</a></li>
+                                <li><a href="missed.html">Missed</a></li>
+                                <li><a href="closed.html">Closed</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-group"></i> <span> Manage Team <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                            <ul class="submenu">
+                                <li><a href="myteam.html">My Team List</a></li>
+                                <li><a href="alllead.html">All Leads</a></li>
+                                <li><a href="viewteam.html">View Team Activities</a></li>
+                                <li><a href="addrep.html">Add Sales Rep</a></li>
+                                <li><a href="viewexpectation.html">View Expectations</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-package-variant"></i> <span> Products <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                            <ul class="submenu">
+                                <li><a href="addproduct.html">Add Product(s)</a></li>
+                                <li><a href="manageprod.html">Manage Product(s)</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- Sidebar -->
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="page-title-box">
+                            <div class="row align-items-center">
+                                <div class="col-sm-6">
+                                    <h4 class="page-title">All Leads from Team</h4>
+                                </div>
+                                <!-- <div class="col-sm-6">
+                                    <ol class="breadcrumb float-right">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Stexo</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Tables</a></li>
+                                        <li class="breadcrumb-item active">Data Table</li>
+                                    </ol>
+                                </div> -->
+                            </div> <!-- end row -->
+                        </div>
+                        <!-- end page-title -->
+    
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+        
+                                        <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">S/N</th>
+                                                <th scope="col">Lead Details</th>
+                                                <th scope="col">Product</th>
+                                                <th scope="col">Deal Status</th>
+                                                <th scope="col">Sales Rep</th>
+                                                <th scope="col">Comments and Next Action Date</th>
+                                                <th scope="col">Actions</th>
+                                            </tr>
+                                            </thead>
+        
+        
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>
+                                                    <a href="#"data-toggle="tooltip"  title="Edit lead details">Hannah
+                                                        <br/><i><b>Sales </b>  @  Sales Ruby<i></a><br/>
+                                                      <b>  Date Added:</b>02-03-2020<br> <b>Contact:</b> admin@admin.com &nbsp;&nbsp;2349022650071
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 <br>Expectation: 120000</td>
+                                                    <td><small class='badge badge-success'> Invoice Sent </small></td>
+                                                              <td> Chisom</td>
+                                  
+                                                    <td>dhhdhd<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2020-03-24 &nbsp;&nbsp;9:00 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=500&repid=1"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=500"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=500"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>2</td>
+                                                    <td>
+                                                    <a href="editlead?id=203"data-toggle="tooltip"  title="Edit lead detials">Adam Okoro
+                                                        <br/><i><b>HR</b>  @  adamsok global<i></a><br/>
+                                                      <b>  Date Added:</b>22-01-2020<br> <b>Contact:</b> abc@gmaill.com &nbsp;&nbsp;090879776555
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 (Pass Ticket) <br>Expectation:70000</td>
+                                                    <td><small class='label label-info'> Invoice Sent </small></td>
+                                                              <td> Munachiso</td>
+                                  
+                                                    <td>Will be paying by next week<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2020-02-05 &nbsp;&nbsp;10:30 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=203&repid=27"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=203"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=203"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>3</td>
+                                                    <td>
+                                                    <a href="editlead?id=201"data-toggle="tooltip"  title="Edit lead detials">Mr Alake TM Ade
+                                                        <br/><i><b>Managing Director</b>  @  Dataguru and Sons TM<i></a><br/>
+                                                      <b>  Date Added:</b>20-01-2020<br> <b>Contact:</b> aleketm@gmail.com &nbsp;&nbsp;07030415912
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 (Pass Ticket) <br>Expectation:120000</td>
+                                                    <td><small class='label label-info'> Invoice Sent </small></td>
+                                                              <td> Chisom Testing Team</td>
+                                  
+                                                    <td>inn<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2020-01-31 &nbsp;&nbsp;12:30 PM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=201&repid=1"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=201"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=201"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>4</td>
+                                                    <td>
+                                                    <a href="editlead?id=179"data-toggle="tooltip"  title="Edit lead detials">Dayo
+                                                        <br/><i><b>Senior Developer</b>  @  From Victor<i></a><br/>
+                                                      <b>  Date Added:</b>10-09-2019<br> <b>Contact:</b> aderemi.dayo.o@gmail.com &nbsp;&nbsp;08137311818
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-navy'> Negotiation Level </small></td>
+                                                              <td> Chisom Testing Team</td>
+                                  
+                                                    <td>schedule to come to the office by Wed 3pm, send him a reminder by today<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-09-10 &nbsp;&nbsp;4:45 PM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=179&repid=1"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=179"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=179"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>5</td>
+                                                    <td>
+                                                    <a href="editlead?id=7"data-toggle="tooltip"  title="Edit lead detials">Jackris Wadiri
+                                                        <br/><i><b></b>  @  Tots Toys<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> jackris.wadiri@totstoysng.com &nbsp;&nbsp;8180499765
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-maroon'> Sales Qualified Lead </small></td>
+                                                              <td> Christopher Anele</td>
+                                  
+                                                    <td>Call and ask how their moving is coming along. And if a decision on training has been taken yet.<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-04-25 &nbsp;&nbsp;11:45 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=7&repid=4"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=7"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=7"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>6</td>
+                                                    <td>
+                                                    <a href="editlead?id=39"data-toggle="tooltip"  title="Edit lead detials">Olajide George          
+                                                        <br/><i><b></b>  @  sendee<i></a><br/>
+                                                      <b>  Date Added:</b>21-03-2019<br> <b>Contact:</b> jidegeorge2010@yahoo.com &nbsp;&nbsp;7061682893
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 (Pass Ticket) <br>Expectation:0</td>
+                                                    <td><small class='label bg-navy'> Negotiation Level </small></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>call on thursday to ask if hes spoken to his team.<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-28 &nbsp;&nbsp;9:00 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=39&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=39"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=39"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>7</td>
+                                                    <td>
+                                                    <a href="editlead?id=37"data-toggle="tooltip"  title="Edit lead detials">James Amah Okon         
+                                                        <br/><i><b></b>  @  sendee<i></a><br/>
+                                                      <b>  Date Added:</b>21-03-2019<br> <b>Contact:</b> jamesebook@gmail.com &nbsp;&nbsp;8138732419
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 (Pass Ticket) <br>Expectation:0</td>
+                                                    <td><small class='label bg-navy'> Negotiation Level </small></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>to call him on tuesday and ask if he has checked his schedule<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-26 &nbsp;&nbsp;10:00 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=37&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=37"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=37"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>8</td>
+                                                    <td>
+                                                    <a href="editlead?id=38"data-toggle="tooltip"  title="Edit lead detials">Fadipe Peter        
+                                                        <br/><i><b></b>  @  sendee<i></a><br/>
+                                                      <b>  Date Added:</b>21-03-2019<br> <b>Contact:</b> fadipepeter38@gmail.com &nbsp;&nbsp;7038885437
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 (Pass Ticket) <br>Expectation:0</td>
+                                                    <td><small class='label label-info'> Dated Commitment </small></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>send mail, and call on Monday for payment  details.<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-25 &nbsp;&nbsp;9:45 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=38&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=38"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=38"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>9</td>
+                                                    <td>
+                                                    <a href="editlead?id=29"data-toggle="tooltip"  title="Edit lead detials">Abugu Benedict chinedu
+                                                        <br/><i><b></b>  @  sendee<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> abuguchinedum27@gmail.com &nbsp;&nbsp;8061599721
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-maroon'> Sales Qualified Lead </small></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>call for payment on friday, send account details<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-22 &nbsp;&nbsp;11:30 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=29&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=29"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=29"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>10</td>
+                                                    <td>
+                                                    <a href="editlead?id=34"data-toggle="tooltip"  title="Edit lead detials">Ibeke Nkemdilim Sylvia  
+                                                        <br/><i><b></b>  @  sendee<i></a><br/>
+                                                      <b>  Date Added:</b>21-03-2019<br> <b>Contact:</b> ibekenkem@gmail.com &nbsp;&nbsp;7085962030
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 (Pass Ticket) <br>Expectation:0</td>
+                                                    <td></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>number busy<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-22 &nbsp;&nbsp;9:30 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=34&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=34"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=34"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>11</td>
+                                                    <td>
+                                                    <a href="editlead?id=3"data-toggle="tooltip"  title="Edit lead detials">Olufikayo Ologun Isaac
+                                                        <br/><i><b></b>  @  Non<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> isaac@kensingtondistillers.co.uk &nbsp;&nbsp;8160534555
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-navy'> Negotiation Level </small></td>
+                                                              <td> Christopher Anele</td>
+                                  
+                                                    <td>Call to know if his boss has given him approval to come and when he will be making payment 
+                                  <br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-20 &nbsp;&nbsp;4:00 PM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=3&repid=4"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=3"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=3"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>12</td>
+                                                    <td>
+                                                    <a href="editlead?id=13"data-toggle="tooltip"  title="Edit lead detials">Uzoma Kelvin Ukaegbu
+                                                        <br/><i><b></b>  @  Non<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> Contactkumad@gmail.com &nbsp;&nbsp;9052338660
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-maroon'> Sales Qualified Lead </small></td>
+                                                              <td> Christopher Anele</td>
+                                  
+                                                    <td>Call to let know the discount will be expiring on the day and ask when he will be anking payment <br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-20 &nbsp;&nbsp;11:00 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=13&repid=4"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=13"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=13"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>13</td>
+                                                    <td>
+                                                    <a href="editlead?id=14"data-toggle="tooltip"  title="Edit lead detials">Maureen Feubode
+                                                        <br/><i><b></b>  @  Non<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> Maureenelaye@gmail.com &nbsp;&nbsp;8070630282
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-maroon'> Sales Qualified Lead </small></td>
+                                                              <td> Christopher Anele</td>
+                                  
+                                                    <td>Call to know when she will be making payment for a tickect 
+                                  <br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-20 &nbsp;&nbsp;10:00 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=14&repid=4"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=14"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=14"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>14</td>
+                                                    <td>
+                                                    <a href="editlead?id=16"data-toggle="tooltip"  title="Edit lead detials">Paul Okunaya
+                                                        <br/><i><b></b>  @  Non<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b>  &nbsp;&nbsp;8077030581
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-maroon'> Sales Qualified Lead </small></td>
+                                                              <td> Christopher Anele</td>
+                                  
+                                                    <td>Call to know when he will be making payment and get a ticket 
+                                  <br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-20 &nbsp;&nbsp;9:00 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=16&repid=4"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=16"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=16"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>15</td>
+                                                    <td>
+                                                    <a href="editlead?id=8"data-toggle="tooltip"  title="Edit lead detials">Oluwafunke Maquis-Odeniyi
+                                                        <br/><i><b></b>  @  Non<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> Mopelolamarquis@gmail.com &nbsp;&nbsp;9038868817
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-maroon'> Sales Qualified Lead </small></td>
+                                                              <td> Christopher Anele</td>
+                                  
+                                                    <td>If she did not make payment on the 18th. Call to know why and ask when she will be making Payment <br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-19 &nbsp;&nbsp;10:00 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=8&repid=4"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=8"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=8"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>16</td>
+                                                    <td>
+                                                    <a href="editlead?id=10"data-toggle="tooltip"  title="Edit lead detials">Adebayo Aladetohun
+                                                        <br/><i><b></b>  @  Non<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> aaladetohun@rocketmail.com &nbsp;&nbsp;8064082328
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-maroon'> Sales Qualified Lead </small></td>
+                                                              <td> Christopher Anele</td>
+                                  
+                                                    <td>Call to know when he will be making payment 
+                                  <br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-19 &nbsp;&nbsp;10:30 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=10&repid=4"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=10"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=10"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>17</td>
+                                                    <td>
+                                                    <a href="editlead?id=1"data-toggle="tooltip"  title="Edit lead detials">Goodness
+                                                        <br/><i><b></b>  @  Non<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b>  &nbsp;&nbsp;9059061750
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-maroon'> Sales Qualified Lead </small></td>
+                                                              <td> Christopher Anele</td>
+                                  
+                                                    <td>Call to discuss SLC2019<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-18 &nbsp;&nbsp;1:00 PM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=1&repid=4"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=1"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=1"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>18</td>
+                                                    <td>
+                                                    <a href="editlead?id=4"data-toggle="tooltip"  title="Edit lead detials">Uzomba
+                                                        <br/><i><b>MD</b>  @  Bochsystem<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> cuzomba@bochsystems.net &nbsp;&nbsp;8060000400
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-navy'> Negotiation Level </small></td>
+                                                              <td> Christopher Anele</td>
+                                  
+                                                    <td>Call to know when he will be making payment.<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-18 &nbsp;&nbsp;4:00 PM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=4&repid=4"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=4"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=4"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>19</td>
+                                                    <td>
+                                                    <a href="editlead?id=5"data-toggle="tooltip"  title="Edit lead detials">Evan Edebor
+                                                        <br/><i><b></b>  @  non<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> evans.sme9ja@gmail.com &nbsp;&nbsp;7068383208
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-navy'> Negotiation Level </small></td>
+                                                              <td> Christopher Anele</td>
+                                  
+                                                    <td>Call to know if he has made a final decision on attending SLC2019.<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-18 &nbsp;&nbsp;4:00 PM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=5&repid=4"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=5"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=5"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>20</td>
+                                                    <td>
+                                                    <a href="editlead?id=6"data-toggle="tooltip"  title="Edit lead detials">Kingsley Ikart
+                                                        <br/><i><b>Manager</b>  @  Gloo.ng <i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> kinsilo@yahoo.com &nbsp;&nbsp;8037212224
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-navy'> Negotiation Level </small></td>
+                                                              <td> Christopher Anele</td>
+                                  
+                                                    <td>Call to know how many of his guys will be coming and when they are likely to make payment 
+                                  <br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-18 &nbsp;&nbsp;4:00 PM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=6&repid=4"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=6"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=6"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>21</td>
+                                                    <td>
+                                                    <a href="editlead?id=18"data-toggle="tooltip"  title="Edit lead detials">Idika Chika
+                                                        <br/><i><b></b>  @  Non<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b>  &nbsp;&nbsp;7065117576
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td></td>
+                                                              <td> Christopher Anele</td>
+                                  
+                                                    <td>Call to discuss SLC2019<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-18 &nbsp;&nbsp;3:30 PM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=18&repid=4"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=18"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=18"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>22</td>
+                                                    <td>
+                                                    <a href="editlead?id=19"data-toggle="tooltip"  title="Edit lead detials">Adeniji
+                                                        <br/><i><b></b>  @  facebook lead<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b>  &nbsp;&nbsp;8030423732
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>call back in 30mins<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-18 &nbsp;&nbsp;12:45 PM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=19&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=19"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=19"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>23</td>
+                                                    <td>
+                                                    <a href="editlead?id=28"data-toggle="tooltip"  title="Edit lead detials">Adekunle Akintunde
+                                                        <br/><i><b></b>  @  micro net<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> info@micronetng.com &nbsp;&nbsp;8023130240
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-maroon'> Sales Qualified Lead </small></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>sent mail with conference details<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>2019-03-11 &nbsp;&nbsp;10:00 AM</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=28&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=28"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=28"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>24</td>
+                                                    <td>
+                                                    <a href="editlead?id=200"data-toggle="tooltip"  title="Edit lead detials">Jude
+                                                        <br/><i><b>Senior Developer</b>  @  Spice Technologies<i></a><br/>
+                                                      <b>  Date Added:</b>15-01-2020<br> <b>Contact:</b> benitachisom0205@gmail.co &nbsp;&nbsp;07030415912
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 (Pass Ticket) <br>Expectation:350000</td>
+                                                    <td><small class='label label-success'> Closed Won </span></td>
+                                                              <td> Chisom Testing Team</td>
+                                  
+                                                    <td>Paid in full <br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>0000-00-00 &nbsp;&nbsp;</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=200&repid=1"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=200"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=200"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>25</td>
+                                                    <td>
+                                                    <a href="editlead?id=178"data-toggle="tooltip"  title="Edit lead detials">David 
+                                                        <br/><i><b>Senior Developer</b>  @  From Ikart<i></a><br/>
+                                                      <b>  Date Added:</b>10-09-2019<br> <b>Contact:</b> umohdavid@gmail.com &nbsp;&nbsp;8039699928
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td><small class='label bg-navy'> Negotiation Level </small></td>
+                                                              <td> Chisom Testing Team</td>
+                                  
+                                                    <td>Will sent him an insight email today<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b>0000-00-00 &nbsp;&nbsp;</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=178&repid=1"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=178"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=178"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>26</td>
+                                                    <td>
+                                                    <a href="editlead?id=9"data-toggle="tooltip"  title="Edit lead detials">Williams
+                                                        <br/><i><b></b>  @  facebook lead<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b>  &nbsp;&nbsp;8022228206
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>Awaiting For Admin Approval<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b> &nbsp;&nbsp;</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=9&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=9"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=9"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>27</td>
+                                                    <td>
+                                                    <a href="editlead?id=11"data-toggle="tooltip"  title="Edit lead detials">Taiwo
+                                                        <br/><i><b></b>  @  facebook lead<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b>  &nbsp;&nbsp;8038765901
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>not picking<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b> &nbsp;&nbsp;</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=11&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=11"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=11"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>28</td>
+                                                    <td>
+                                                    <a href="editlead?id=12"data-toggle="tooltip"  title="Edit lead detials">Taiwo
+                                                        <br/><i><b></b>  @  facebook lead<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b>  &nbsp;&nbsp;8038765901
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product:  <br>Expectation:0</td>
+                                                    <td></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>not picking<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b> &nbsp;&nbsp;</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=12&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=12"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=12"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>29</td>
+                                                    <td>
+                                                    <a href="editlead?id=30"data-toggle="tooltip"  title="Edit lead detials">Stephen Othuke Agbaka
+                                                        <br/><i><b></b>  @  sendee<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> stephenagbaka@gmail.com &nbsp;&nbsp;9024865999
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 (Pass Ticket) <br>Expectation:0</td>
+                                                    <td></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>won't be attending but is interested in subsequent conferences.<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b> &nbsp;&nbsp;</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=30&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=30"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=30"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>30</td>
+                                                    <td>
+                                                    <a href="editlead?id=31"data-toggle="tooltip"  title="Edit lead detials">Sophia Khan
+                                                        <br/><i><b></b>  @  sendee<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> sophi004@yahoo.com &nbsp;&nbsp;8033230325
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 (Pass Ticket) <br>Expectation:0</td>
+                                                    <td></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>not picking<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b> &nbsp;&nbsp;</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=31&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=31"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=31"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>31</td>
+                                                    <td>
+                                                    <a href="editlead?id=32"data-toggle="tooltip"  title="Edit lead detials">Anthony Amadin
+                                                        <br/><i><b></b>  @  sendee<i></a><br/>
+                                                      <b>  Date Added:</b>18-03-2019<br> <b>Contact:</b> amadinopele@gmail.com &nbsp;&nbsp;8029416110
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 (Pass Ticket) <br>Expectation:0</td>
+                                                    <td></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>to call back later<br><b>Next Follow Up:</b> <span style="color:#ff0000"><b> &nbsp;&nbsp;</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=32&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=32"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=32"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>32</td>
+                                                    <td>
+                                                    <a href="editlead?id=35"data-toggle="tooltip"  title="Edit lead detials">Endurace Ihuodu        
+                                                        <br/><i><b></b>  @  sendee<i></a><br/>
+                                                      <b>  Date Added:</b>21-03-2019<br> <b>Contact:</b> ihuoduendurance@gmail.com &nbsp;&nbsp;8130146162
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 (Pass Ticket) <br>Expectation:0</td>
+                                                    <td></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td>to get back to me, <br><b>Next Follow Up:</b> <span style="color:#ff0000"><b> &nbsp;&nbsp;</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=35&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=35"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=35"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr><tr>
+                                                    <td>33</td>
+                                                    <td>
+                                                    <a href="editlead?id=36"data-toggle="tooltip"  title="Edit lead detials">Kelechi      
+                                                        <br/><i><b></b>  @  sendee<i></a><br/>
+                                                      <b>  Date Added:</b>21-03-2019<br> <b>Contact:</b> kayceebravo@yahoo.co.uk &nbsp;&nbsp;7065948099
+                                                            
+                                                          
+                                                    </td>
+                                                    
+                                                    <td>Product: SLC 2020 (Pass Ticket) <br>Expectation:0</td>
+                                                    <td></td>
+                                                              <td> Cynthia Idinye</td>
+                                  
+                                                    <td><br><b>Next Follow Up:</b> <span style="color:#ff0000"><b> &nbsp;&nbsp;</b></span></td>
+                                                    
+                                                    <td>
+                                  
+                                                    <a href="writecomments?id=36&repid=2"data-toggle="tooltip" title="Write to Salesrep about Lead"><i class="fa fa-edit"></i></a>&nbsp; &nbsp;| 
+                                                    
+                                                     <a href="comments?id=36"data-toggle="tooltip" title="View Thread"><i class="fa fa-eye text-info"></i></a>&nbsp; &nbsp;| 
+                                                    <a href="del?id=36"data-toggle="tooltip" title="Delete Lead"><i class="fa fa-trash text-danger"></i></a>
+                                                   
+                                  
+                                  
+                                                    </td>
+                                                      </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">
+                                                    Showing 1 to 3 of 0 entries
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                                                    <ul class="pagination">
+                                                        <li class="paginate_button previous disabled" id="example2_previous">
+                                                            <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0">Previous</a>
+                                                        </li>
+                                                        <li class="paginate_button next disabled" id="example2_next">
+                                                            <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="1">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                <!-- content -->
+
+                <footer class="footer">
+                    Sales Ruby Limited © 2020 <span class="d-none d-sm-inline-block"> - Crafted by Web Development Team</span>.
+                </footer>
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/waves.min.js"></script>
+
+        <!-- Bootstrap inputmask js -->
+        <script src="../plugins/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+        <script>
+            jQuery.browser = {};
+                (function () {
+                    jQuery.browser.msie = false;
+                    jQuery.browser.version = 0;
+                    if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+                        jQuery.browser.msie = true;
+                        jQuery.browser.version = RegExp.$1;
+                    }
+                })();
+        </script>
+
+        
+    </body>
+
+</html>

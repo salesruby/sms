@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Dashboard | Add Lead</title>
+    <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
+    <meta content="Themesdesign" name="author" />
+    <link rel="shortcut icon" href="assets/images/SR-favicon.png">
+
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="../plugins/morris/morris.css">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Top Bar Start -->
+        <div class="topbar">
+
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="index.html" class="logo">
+                    <span class="logo-light">
+                            <i class="mdi mdi-camera-control"></i> Sales Ruby
+                            <!-- <i class="mdi mdi-camera-control"></i> Stexo -->
+                            <!-- <img src="assets/images/srlogo.png" class="SRlogo" alt="logo"> -->
+                        </span>
+                    <span class="logo-sm">
+                        <i class="mdi mdi-camera-control"></i>
+                            <!-- <img src="assets/images/SR-favicon.png" class="SRfav" alt=""> -->
+                        </span>
+                </a>
+            </div>
+
+            <nav class="navbar-custom">
+                <ul class="navbar-right list-inline float-right mb-0">       
+
+                     <li class="dropdown notification-list list-inline-item">
+                        <div class="dropdown notification-list nav-pro-img">
+                            <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="assets/images/users/no-img.png" alt="user" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-wallet"></i> Wallet</a>
+                                <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline"></i> Lock screen</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="#"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <ul class="list-inline menu-left mb-0">
+                    <li class="float-left">
+                        <button class="button-menu-mobile open-left waves-effect">
+                            <i class="mdi mdi-menu"></i>
+                        </button>
+                    </li>
+                    <li class="d-none d-md-inline-block">
+                        <form role="search" class="app-search">
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control" placeholder="Search..">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="slimscroll-menu" id="remove-scroll">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu" id="side-menu">
+                        <li class="menu-title">Menu</li>
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="icon-accelerator"></i><span> Dashboard </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-circle"></i><span> Leads <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="mylead.html">My Lead</a></li>
+                                <li><a href="addlead.html">Add Lead</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-chart-line"></i><span>My Tasks <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                            <ul class="submenu">
+                                <li><a href="deadline.html">Deadlines</a></li>
+                                <li><a href="missed.html">Missed</a></li>
+                                <li><a href="closed.html">Closed</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-account-group"></i> <span> Manage Team <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                            <ul class="submenu">
+                                <li><a href="myteam.html">My Team List</a></li>
+                                <li><a href="alllead.html">All Leads</a></li>
+                                <li><a href="viewteam.html">View Team Activities</a></li>
+                                <li><a href="addrep.html">Add Sales Rep</a></li>
+                                <li><a href="viewexpectation.html">View Expectations</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-package-variant"></i> <span> Products <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span> </a>
+                            <ul class="submenu">
+                                <li><a href="addproduct.html">Add Product(s)</a></li>
+                                <li><a href="manageprod.html">Manage Product(s)</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- Sidebar -->
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="page-title-box">
+                            <div class="row align-items-center">
+                                <div class="col-sm-6">
+                                    <h4 class="page-title">Add New Lead</h4>
+                                </div>
+                                <!-- <div class="col-sm-6">
+                                    <ol class="breadcrumb float-right">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Stexo</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Forms</a></li>
+                                        <li class="breadcrumb-item active">Form Mask</li>
+                                    </ol>
+                                </div> -->
+                            </div> <!-- end row -->
+                        </div>
+                        <!-- end page-title -->
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card m-b-30">
+                                    <div class="card-body"> 
+        
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="p-20">
+                                                    <form action="#">
+                                                        <div class="form-group">
+                                                            <label>Lead Details</label>
+                                                            <input type="text" placeholder="Enter Full Name" class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Organization Details</label>
+                                                            <input type="text" placeholder="Enter Company Name" class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Phone Number</label>
+                                                            <input type="tel" placeholder="Enter Telephone Number" class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Product</label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <select class="form-control">
+                                                                <option value="">Select Product</option>
+                                                                <option value="">SLC 2020</option>
+                                                                <option value="">Recruitment</option>
+                                                                <option value="">Bespoke Training</option>
+                                                                <option value="">Academy Training</option>
+                                                                <option value="">Tech Solution</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group m-b-0">
+                                                            <label>Add Comment</label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                           <textarea class="form-control" name="comment" placeholder="Enter Next Comment" cols="30" rows="5"></textarea> 
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-lg-6">
+                                                <div class="p-20">
+                                                    <form action="#">
+        
+                                                        <div class="form-group">
+                                                            <label>Level of Lead</label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <select class="form-control">
+                                                                <option value="">Select Level</option>
+                                                                <option value="">Sales Qualified Lead</option>
+                                                                <option value="">Negotiation Level</option>
+                                                                <option value="">Dated Commitment</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Lead Designation</label>
+                                                            <input type="text" placeholder="Enter Lead Designation" class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Email Address</label>
+                                                            <input type="text" placeholder="Enter Email Address" class="form-control">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Deal Expectation</label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">NGN</span>
+                                                                <input type="number" name="expection" class="form-control" placeholder="Enter Deal Expectation">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Next Dated Step</label>
+                                                            <div class="col-sm-13">
+                                                                <input class="form-control" type="date" value="dd/mm/yyyy" id="example-date-input">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Next Timed Step</label>
+                                                            <div class="col-sm-13">
+                                                                <input class="form-control" type="time" value="hh:mm:ss" id="example-date-input">
+                                                            </div>
+                                                        </div>
+                            
+                                                    </form>
+                                                    
+                                                </div>
+                                            </div> <!-- end col -->
+                                            <div class="col-md-12 col-xs-12 col-sm-12 col-md-offset-3">
+                                                <button type="submit" name="addlead" class="btn1 btn-primary btn-block btn-lg">Add Lead</button>
+                                            </div>
+
+                                        </div> <!-- end row -->
+        
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row --> 
+                            
+
+                        
+                    </div>
+                    <!-- container-fluid -->
+
+                </div>
+                <!-- content -->
+
+                <footer class="footer">
+                    Sales Ruby Limited © 2020 <span class="d-none d-sm-inline-block"> - Crafted by Web Development Team</span>.
+                </footer>
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/waves.min.js"></script>
+
+        <!-- Bootstrap inputmask js -->
+        <script src="../plugins/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+        <script>
+            jQuery.browser = {};
+                (function () {
+                    jQuery.browser.msie = false;
+                    jQuery.browser.version = 0;
+                    if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+                        jQuery.browser.msie = true;
+                        jQuery.browser.version = RegExp.$1;
+                    }
+                })();
+        </script>
+
+        
+    </body>
+
+</html>
